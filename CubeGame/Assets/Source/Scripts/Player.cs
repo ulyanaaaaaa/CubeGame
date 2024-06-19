@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
             {
                 cube.DeleteParent();
                 _isPick = false;
+                cube.CheckZone();
             }
         }
     }

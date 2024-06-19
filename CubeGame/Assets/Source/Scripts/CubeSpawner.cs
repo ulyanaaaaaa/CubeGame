@@ -3,9 +3,8 @@ using UnityEngine;
 public class CubeSpawner : MonoBehaviour
 {
     [SerializeField] private Transform _firstZone; 
+    [SerializeField] private int gridSize = 3;
     private Cube _cube; 
-    
-    private Vector3[,] _gridPositions = new Vector3[3, 3];
 
     private void Awake()
     {
@@ -14,31 +13,20 @@ public class CubeSpawner : MonoBehaviour
 
     private void Start()
     {
-        InitializeGridPositions(_firstZone);
-        SpawnCubes(_firstZone);
+        RandomSpawnCube();
     }
     
-    private void InitializeGridPositions(Transform zone)
+    private void RandomSpawnCube()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < gridSize; i++)
         {
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < gridSize; j++)
             {
-                _gridPositions[i, j] = new Vector3(zone.position.x - 1 + i,
-                    zone.position.y + 0.5f,
-                    zone.position.z - 1 + j);
-            }
-        }
-    }
-    
-    private void SpawnCubes(Transform zone)
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                if (Random.value > 0.5f) 
-                    Instantiate(_cube, _gridPositions[i, j], Quaternion.identity, zone);
+                if (Random.value > 0.7f) 
+                {
+                    Vector3 position = new Vector3(i - 1, 1, j - 1);
+                    Instantiate(_cube, _firstZone.position + position, Quaternion.identity, _firstZone);
+                }
             }
         }
     }
