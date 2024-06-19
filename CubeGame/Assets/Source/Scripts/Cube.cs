@@ -22,9 +22,7 @@ public class Cube : MonoBehaviour
         if (Physics.Raycast(transform.position, down, out hit, _checkZoneRange))
         {
             if (hit.collider.TryGetComponent(out Zone zone))
-            {
                 AddParent(zone.gameObject);
-            }
         }
     }
 }
