@@ -14,4 +14,10 @@ public class NetworkManagerUI : MonoBehaviour
         if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
             NetworkManager.Singleton.StartClient();
     }
+    
+    public void StartServer()
+    {
+        if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+            NetworkManager.Singleton.StartServer();
+    }
 }
