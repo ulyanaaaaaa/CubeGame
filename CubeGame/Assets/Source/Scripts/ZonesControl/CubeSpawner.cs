@@ -18,7 +18,7 @@ public class CubeSpawner : MonoBehaviour
         GenerateRandomGrid();
     }
 
-    private void GenerateRandomGrid()
+    public void GenerateRandomGrid()
     {
         for (int i = 0; i < _gridSize; i++)
         {
