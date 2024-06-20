@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform _firstZone; 
     [SerializeField] private int _gridSize = 3;
     private Cube _cube; 
     private bool[,] _grid;
@@ -20,14 +19,16 @@ public class CubeSpawner : MonoBehaviour
 
     public void GenerateRandomGrid()
     {
+        ClearGrid();
+        
         for (int i = 0; i < _gridSize; i++)
         {
             for (int j = 0; j < _gridSize; j++)
             {
-                if (Random.value > 0.8f) 
+                if (Random.value > 0.7f) 
                 {
                     Vector3 position = new Vector3(i - 1, 1, j - 1);
-                    Instantiate(_cube, _firstZone.position + position, Quaternion.identity, _firstZone);
+                    Instantiate(_cube, transform.position + position, Quaternion.identity, transform);
                     _grid[i, j] = true; 
                 }
                 else
@@ -39,5 +40,13 @@ public class CubeSpawner : MonoBehaviour
     public bool[,] GetGrid()
     {
         return _grid;
+    }
+
+    private void ClearGrid()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private bool _isPick;
     [SerializeField] private float _pickUpRange = 3f;
+    private bool _isPick;
 
     private void Update()
     {

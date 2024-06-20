@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Cube : NetworkBehaviour
 {
-    [SerializeField] private float _checkZoneRange = 3f;
+    [SerializeField] private float _checkZoneRange = 1f;
     
     public void DeleteParent()
     {

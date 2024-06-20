@@ -4,9 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class ResultUI : MonoBehaviour
 {
-    private TextMeshProUGUI _text;
     [SerializeField] private GridCheсker _gridCheсker;
     [SerializeField] private CubeSpawner _cubeSpawner;
+    private TextMeshProUGUI _text;
 
     private void Awake()
     {

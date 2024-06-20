@@ -23,12 +23,12 @@ public class GridCheсker : MonoBehaviour
 
     private void Start()
     {
-        _firstGrid = _firstZoneGenerator.GetGrid();
         _secondGrid = new bool[_gridSize, _gridSize];
     }
 
     public void CheckGrid()
     {
+        _firstGrid = _firstZoneGenerator.GetGrid();
         UpdateSecondGrid();
 
         for (int i = 0; i < _gridSize; i++)
