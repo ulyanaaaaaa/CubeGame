@@ -25,7 +25,7 @@ public class CubeSpawner : MonoBehaviour
         {
             for (int j = 0; j < _gridSize; j++)
             {
-                if (Random.value > 0.7f) 
+                if (Random.value > 0.8f) 
                 {
                     Vector3 position = new Vector3(i - 1, 1, j - 1);
                     Instantiate(_cube, transform.position + position, Quaternion.identity, transform);

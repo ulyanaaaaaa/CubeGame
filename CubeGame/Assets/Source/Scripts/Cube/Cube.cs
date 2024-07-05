@@ -1,7 +1,6 @@
-using Unity.Netcode;
 using UnityEngine;
 
-public class Cube : NetworkBehaviour
+public class Cube : MonoBehaviour
 {
     [SerializeField] private float _checkZoneRange = 1f;
     
