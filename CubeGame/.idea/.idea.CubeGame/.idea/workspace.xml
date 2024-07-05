@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/BestScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/LevelNumber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/ResultUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/TimerViewer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -58,7 +59,7 @@
       <workItem from="1718840549595" duration="4058000" />
       <workItem from="1718877379441" duration="4268000" />
       <workItem from="1718912348485" duration="4067000" />
-      <workItem from="1720184229375" duration="7559000" />
+      <workItem from="1720184229375" duration="11580000" />
     </task>
     <servers />
   </component>
