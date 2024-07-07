@@ -1,0 +1,14 @@
+id	Ru	Eng	Tur
+back	Назад	Back	Geri
+rules	повторите положение кубиков в пустом пространстве!	repeat the position of the cubes in the empty area!	bo? alanda k?plerin konumunu tekrarlay?n!
+best_score	Лучший результат:	Best score:	En iyi puan:
+play	ИГРАТЬ	PLAY	OYNAMAK
+control	Управление: WASD	Control: WASD	Kontrol: WASD
+pick	SHIFT - поднять/ опустить куб	SHIFT - pick up/ pick down cube	SHIFT - k?p? al / al
+exit	ВЫХОД	EXIT	?IKI?
+check	ПРОВЕРИТЬ	CHECK	KONTROL ETMEK
+level	Уровень:	Level:	Seviye:
+good_result	Вы победили!	You win!	Sen kazand?n!
+bed_result	Вы проиграли! Попробуйте еще раз.	 You loose! Try again.	Sen kaybettin! Tekrar deneyin.
+			
+			

@@ -2,22 +2,34 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
+[RequireComponent(typeof(TextTranslator))]
 public class BestScore : MonoBehaviour
 {
     private int _bestScore = 1;
     private TextMeshProUGUI _text;
     private SaveService _saveService;
+    private TextTranslator _translator;
     private string _id = "best_score";
 
     private void Awake()
     {
+        _translator = GetComponent<TextTranslator>();
         _text = GetComponent<TextMeshProUGUI>();
+        _saveService = new SaveService();
+    }
+
+    private void OnEnable()
+    {
+        _translator.TranslateText += UpdateBestScore;
+    }
+    
+    private void OnDisable()
+    {
+        _translator.TranslateText -= UpdateBestScore;
     }
     
     private void Start()
     {
-        _saveService = new SaveService();
-
         if (!_saveService.Exists(_id))
         {
             _bestScore = 1;
@@ -55,7 +67,7 @@ public class BestScore : MonoBehaviour
 
     private void UpdateBestScore()
     {
-        _text.text = "Best score: " +  _bestScore;
+        _text.text = _translator.Translate("best_score") + "\t" + _bestScore;
         Save();
     }
 }

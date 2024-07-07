@@ -3,6 +3,7 @@ using UnityEngine;
 public class CubeSpawner : MonoBehaviour
 {
     [SerializeField] private int _gridSize = 3;
+    [SerializeField] private GameButtons _gameButtons;
     private Cube _cube; 
     private bool[,] _grid;
 
@@ -10,6 +11,16 @@ public class CubeSpawner : MonoBehaviour
     {
         _cube = Resources.Load<Cube>("Cube");
         _grid = new bool[_gridSize, _gridSize];
+    }
+
+    private void OnEnable()
+    {
+        _gameButtons.OnPlay += GenerateRandomGrid;
+    }
+
+    private void OnDisable()
+    {
+        _gameButtons.OnPlay -= GenerateRandomGrid;
     }
 
     private void Start()

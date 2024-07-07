@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
+[RequireComponent(typeof(TextTranslator))]
 public class ResultUI : MonoBehaviour
 {
     [SerializeField] private GridCheсker _gridCheсker;
@@ -10,9 +11,11 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private float _lifeLenght = 3f;
     private TextMeshProUGUI _text;
     private Coroutine _tick;
+    private TextTranslator _translator;
 
     private void Awake()
     {
+        _translator = GetComponent<TextTranslator>();
         _text = GetComponent<TextMeshProUGUI>();
     }
 
@@ -31,7 +34,7 @@ public class ResultUI : MonoBehaviour
 
     private void WinText()
     {
-        _text.text = "You win!";
+        _text.text = _translator.Translate("good_result");
         _text.color = Color.green;
         _cubeSpawner.GenerateRandomGrid();
         _tick = StartCoroutine(LifeTick());
@@ -39,8 +42,8 @@ public class ResultUI : MonoBehaviour
 
     private void LooseText()
     {
-        _text.text = "You loose! Try again.";
         _text.color = Color.red;
+        _text.text = _translator.Translate("bed_result");
         _tick = StartCoroutine(LifeTick());
     }
 
