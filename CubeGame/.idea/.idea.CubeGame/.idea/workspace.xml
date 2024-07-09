@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Save/ISaveService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Translate/TextTranslator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/AdsWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/BestScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/GameButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/UI/LevelNumber.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,6 +65,8 @@
       <workItem from="1720184229375" duration="11580000" />
       <workItem from="1720287733650" duration="8680000" />
       <workItem from="1720348311217" duration="7534000" />
+      <workItem from="1720538964495" duration="3120000" />
+      <workItem from="1720542621179" duration="5262000" />
     </task>
     <servers />
   </component>

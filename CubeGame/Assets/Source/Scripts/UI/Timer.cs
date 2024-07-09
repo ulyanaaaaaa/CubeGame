@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
 
     private void OnEnable()
     {
-        _gridCheсker.OnLoose += Restart;
+        _gridCheсker.OnLoose += StopTimer;
         _gridCheсker.OnWin += Restart;
         _gameButtons.OnPlay += StartTimer;
         _gameButtons.OnExit += StopTimer;
@@ -22,13 +22,13 @@ public class Timer : MonoBehaviour
     
     private void OnDisable()
     {
-        _gridCheсker.OnLoose -= Restart;
+        _gridCheсker.OnLoose -= StopTimer;
         _gridCheсker.OnWin -= Restart;
         _gameButtons.OnPlay -= StartTimer;
         _gameButtons.OnExit -= StopTimer;
     }
 
-    private void StartTimer()
+    public void StartTimer()
     {
         if (_tick != null)
             StopCoroutine(_tick);

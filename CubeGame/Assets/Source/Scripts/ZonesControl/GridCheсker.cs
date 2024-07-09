@@ -8,7 +8,8 @@ public class GridCheсker : MonoBehaviour
     public Action OnLoose;
     
     [SerializeField] private Transform _firstZone; 
-    [SerializeField] private Transform _secondZone; 
+    [SerializeField] private Transform _secondZone;
+    [SerializeField] private GameObject _failWindow;
     [SerializeField] private int _gridSize = 3;
     private CubeSpawner _firstZoneGenerator;
     private bool _isCorrect;
@@ -19,6 +20,16 @@ public class GridCheсker : MonoBehaviour
     private void Awake()
     {
         _firstZoneGenerator = _firstZone.GetComponent<CubeSpawner>();
+    }
+
+    private void OnEnable()
+    {
+        OnLoose += () => _failWindow.SetActive(true);
+    }
+    
+    private void OnDisable()
+    {
+        OnLoose -= () => _failWindow.SetActive(true);
     }
 
     private void Start()

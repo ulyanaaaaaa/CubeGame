@@ -17,19 +17,11 @@ public class BestScore : MonoBehaviour
         _text = GetComponent<TextMeshProUGUI>();
         _saveService = new SaveService();
     }
-
-    private void OnEnable()
-    {
-        _translator.TranslateText += UpdateBestScore;
-    }
-    
-    private void OnDisable()
-    {
-        _translator.TranslateText -= UpdateBestScore;
-    }
     
     private void Start()
     {
+        _translator.TranslateText += UpdateBestScore;
+        
         if (!_saveService.Exists(_id))
         {
             _bestScore = 1;
@@ -67,7 +59,7 @@ public class BestScore : MonoBehaviour
 
     private void UpdateBestScore()
     {
-        _text.text = _translator.Translate("best_score") + "\t" + _bestScore;
+        _text.text = _translator.Translate(_id) + "\n" + _bestScore;
         Save();
     }
 }

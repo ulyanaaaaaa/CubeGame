@@ -13,11 +13,14 @@ public class TextTranslator : MonoBehaviour
     private TextMeshProUGUI _textMesh;
     private Translator _translator;
     private string _result;
+
+    private void Awake()
+    {
+        _translator = Camera.main.GetComponent<Translator>();
+    }
     
     private void Start()
     {
-        _translator = Camera.main.GetComponent<Translator>();
-        
         if (_translator == null)
             throw new Exception("Translator is null");
             

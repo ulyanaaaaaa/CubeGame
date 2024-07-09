@@ -1,14 +1,14 @@
 id	Ru	Eng	Tur
-back	Назад	Back	Geri
-rules	повторите положение кубиков в пустом пространстве!	repeat the position of the cubes in the empty area!	bo? alanda k?plerin konumunu tekrarlay?n!
-best_score	Лучший результат:	Best score:	En iyi puan:
-play	ИГРАТЬ	PLAY	OYNAMAK
-control	Управление: WASD	Control: WASD	Kontrol: WASD
-pick	SHIFT - поднять/ опустить куб	SHIFT - pick up/ pick down cube	SHIFT - k?p? al / al
-exit	ВЫХОД	EXIT	?IKI?
-check	ПРОВЕРИТЬ	CHECK	KONTROL ETMEK
-level	Уровень:	Level:	Seviye:
-good_result	Вы победили!	You win!	Sen kazand?n!
-bed_result	Вы проиграли! Попробуйте еще раз.	 You loose! Try again.	Sen kaybettin! Tekrar deneyin.
-			
-			
+back	РќР°Р·Р°Рґ	Back	Geri
+rules	РїРѕРІС‚РѕСЂРёС‚Рµ РїРѕР»РѕР¶РµРЅРёРµ РєСѓР±РѕРІ РІ СЃРІРѕР±РѕРґРЅРѕР№ Р·РѕРЅРµ!	repeat the position of the cubes in the empty area!	bos alanda kuplerin konumunu tekrarlayin!
+best_score	Р›СѓС‡С€РёР№ СЂРµР·СѓР»СЊС‚aС‚:	Best score:	En iyi puan:
+play	РР“Р AРўР¬	PLAY	OYNAMAK
+control	РЈРїСЂaРІР»РµРЅРёРµ: WASD	Control: WASD	Kontrol: WASD
+pick	SHIFT - РїРѕРґРЅСЏС‚СЊ/ РѕРїСѓСЃС‚РёС‚СЊ РєСѓР±	SHIFT - pick up/ pick down cube	SHIFT - kupu al / al
+exit	Р’Р«РҐРћР”	EXIT	CIKIS
+check	РџР РћР’Р•Р РРўР¬	CHECK	KONTROL ETMEK
+level	РЈСЂРѕРІРµРЅСЊ:	Level:	Seviye:
+good_result	    РџСЂaРІРёР»СЊРЅРѕ!	You win!	Sen kazandin!
+bed_result	РќРµРїСЂР°РІРёР»СЊРЅРѕ!	You loose! Try again.	Sen kaybettin! Tekrar deneyin.
+ad_text   РџРѕСЃРјРѕС‚СЂРёС‚Рµ СЂРµРєР»aРјСѓ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ!   Watch the advertisement to continue!  Devam etmek icin reklamД± izleyin! 
+watch_ads  РЎРњРћРўР Р•РўР¬ Р Р•РљР›РђРњРЈ   VIEW ADVERTISING   REKLAMLARI GORUNTULE
