@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 using YG;
 
 public class AdsWindow : MonoBehaviour
 {
-    [SerializeField] private Timer _timer;
+    public Action OnContinue;
     
     private void OnEnable()
     {
@@ -13,7 +14,7 @@ public class AdsWindow : MonoBehaviour
     private void Rewarded(int i)
     {
         gameObject.SetActive(false); 
-        _timer.StartTimer();
+        OnContinue?.Invoke();
     }
     
     private void OnDisable()

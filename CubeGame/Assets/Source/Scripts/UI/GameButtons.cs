@@ -6,6 +6,7 @@ public class GameButtons : MonoBehaviour
 {
     [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _languageMenu;
+    [SerializeField] private GameObject _failWindow;
     private Translator _translator;
     public Action OnPlay;
     public Action OnExit;
@@ -15,27 +16,17 @@ public class GameButtons : MonoBehaviour
         _translator = GetComponent<Translator>();
     }
 
-    private void OnEnable()
-    {
-        OnPlay += () => _mainMenu.SetActive(false);
-        OnExit += () => _mainMenu.SetActive(true);
-        OnExit += () => _languageMenu.SetActive(false);
-    }
-    
-    private void OnDisable()
-    {
-        OnPlay -= () => _mainMenu.SetActive(false);
-        OnExit -= () => _mainMenu.SetActive(true);
-        OnExit -= () => _languageMenu.SetActive(false);
-    }
-
     public void Play()
     {
+        _mainMenu.SetActive(false);
         OnPlay?.Invoke();
     }
 
     public void Exit()
     {
+        _mainMenu.SetActive(true);
+        _languageMenu.SetActive(false);
+        _failWindow.SetActive(false);
         OnExit?.Invoke();
     }
 

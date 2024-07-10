@@ -5,12 +5,13 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public Action<float, float> OnDurationChanged;
-    
+
+    [SerializeField] private AdsWindow _adsWindow;
     [SerializeField] private GridCheсker _gridCheсker;
     [SerializeField] private GameButtons _gameButtons;
     [SerializeField] private float _duration;
     private Coroutine _tick;
-    [SerializeField] private float _startDuration;
+    private float _startDuration;
 
     private void OnEnable()
     {
@@ -18,6 +19,7 @@ public class Timer : MonoBehaviour
         _gridCheсker.OnWin += Restart;
         _gameButtons.OnPlay += StartTimer;
         _gameButtons.OnExit += StopTimer;
+        _adsWindow.OnContinue += StartTimer;
     }
     
     private void OnDisable()
@@ -26,6 +28,7 @@ public class Timer : MonoBehaviour
         _gridCheсker.OnWin -= Restart;
         _gameButtons.OnPlay -= StartTimer;
         _gameButtons.OnExit -= StopTimer;
+        _adsWindow.OnContinue -= StartTimer;
     }
 
     public void StartTimer()

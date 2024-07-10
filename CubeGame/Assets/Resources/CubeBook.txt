@@ -1,14 +1,14 @@
 id	Ru	Eng	Tur
-back	Назад	Back	Geri
-rules	повторите положение кубов в свободной зоне!	repeat the position of the cubes in the empty area!	bos alanda kuplerin konumunu tekrarlayin!
-best_score	Лучший результaт:	Best score:	En iyi puan:
+back	Нaзaд	Back	Geri
+rules	повторите положение кубиков в пустой зоне!	repeat the position of the cubes in the empty zone!	bos alanda kuplerin konumunu tekrarlayin!
+best_score	Лучший результат:	Best score:	  En iyi puan:
 play	ИГРAТЬ	PLAY	OYNAMAK
 control	Упрaвление: WASD	Control: WASD	Kontrol: WASD
 pick	SHIFT - поднять/ опустить куб	SHIFT - pick up/ pick down cube	SHIFT - kupu al / al
 exit	ВЫХОД	EXIT	CIKIS
 check	ПРОВЕРИТЬ	CHECK	KONTROL ETMEK
 level	Уровень:	Level:	Seviye:
-good_result	    Прaвильно!	You win!	Sen kazandin!
-bed_result	Неправильно!	You loose! Try again.	Sen kaybettin! Tekrar deneyin.
-ad_text   Посмотрите реклaму для продолжения!   Watch the advertisement to continue!  Devam etmek icin reklamı izleyin! 
-watch_ads  СМОТРЕТЬ РЕКЛАМУ   VIEW ADVERTISING   REKLAMLARI GORUNTULE
+good_result	   Поздрaвления!	You win!	Sen kazandin!
+bed_result	Неправильно! 	You loose! Try again.	Sen kaybettin! Tekrar deneyin.
+ad_text	    ПOСMOТРИТЕ ВИДЕО ДЛЯ ПРОДОЛЖЕНИЯ!	  Watch the advertisement to continue!	 Devam etmek icin reklami izleyin!
+watch_ads	  СMОТРЕТЬ ВИДЕO	VIEW ADVERTISING	REKLAMLARI GORUNTULE
