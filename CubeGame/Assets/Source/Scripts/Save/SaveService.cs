@@ -21,7 +21,7 @@ public class SaveService : ISaveService
     public void Load<T>(string id, Action<T> callback)
     {
         string path = BuildPath(id);
-
+        Debug.Log(path);
         using (var fileStream = new StreamReader(path))
         {
             var json = fileStream.ReadToEnd();

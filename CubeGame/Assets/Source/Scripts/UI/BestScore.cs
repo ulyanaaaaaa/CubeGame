@@ -22,14 +22,14 @@ public class BestScore : MonoBehaviour
     {
         _translator.TranslateText += UpdateBestScore;
         
-        if (!_saveService.Exists(_id))
+        if (!PlayerPrefs.HasKey(_id))
         {
             _bestScore = 1;
             Save();
         }
         else
-            Load(); 
-        
+            Load();
+
         UpdateBestScore();
     }
     
@@ -44,17 +44,19 @@ public class BestScore : MonoBehaviour
     
     private void Save()
     {
-        BestScoreSaveData data = new BestScoreSaveData();
-        data.BestScore = _bestScore;
-        _saveService.Save(_id, data);
+        //BestScoreSaveData data = new BestScoreSaveData();
+        //data.BestScore = _bestScore;
+        //_saveService.Save(_id, data);
+        PlayerPrefs.SetInt(_id, _bestScore);
     }
 
     private void Load()
     {
-        _saveService.Load<BestScoreSaveData>(_id, data =>
-        {
-            _bestScore = data.BestScore;
-        });
+        //.Load<BestScoreSaveData>(_id, data =>
+        //{
+            //_bestScore = data.BestScore;
+        //});
+        _bestScore = PlayerPrefs.GetInt(_id);
     }
 
     private void UpdateBestScore()
